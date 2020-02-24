@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "tlc_frontend",
+      name: "DishServe",
       script: "./app.js",
       exec_interpreter: "./node_modules/.bin/babel-node",
       env: {

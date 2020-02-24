@@ -2,6 +2,18 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { getHomeData } from "../Action/Action";
 import { parse } from "query-string";
+
+function getRestaurantsUrl(url) {
+  return url
+    ? url
+        .replace("UPDATE_IMAGE_WIDTH", 300)
+        .replace("UPDATE_IMAGE_HEIGHT", 300)
+        .replace(
+          "UPDATE_GOOGLE_API_KEY",
+          "AIzaSyDM4BtVx-2cRWTEEu3JOdx0szr735nXzPU"
+        )
+    : "";
+}
 class HomeComponent extends React.Component {
   static fetching({ dispatch }) {
     const restId = "5e4d85b4455edd4625dfdb17";
@@ -16,15 +28,16 @@ class HomeComponent extends React.Component {
   };
   componentDidMount() {
     this.getInitialData();
+    window.location.href = "dishserve://app";
   }
   renderSeoTags = () => {
     if (!this.props.homeData) {
       return null;
     }
     console.log(this.state);
-    let image = "/public/logo.png";
+    let image = "https://disherveimages.s3-eu-west-1.amazonaws.com/logo.png";
     if (this.props.homeData.restaurantImage) {
-      image = this.props.homeData.restaurantImage;
+      image = getRestaurantsUrl(this.props.homeData.restaurantImage);
     }
     return (
       <Helmet>

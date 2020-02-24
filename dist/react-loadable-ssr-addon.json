@@ -1,0 +1,61 @@
+{
+  "entrypoints": [
+    "main"
+  ],
+  "origins": {
+    "1": [
+      0,
+      1
+    ],
+    "2": [
+      3,
+      2
+    ],
+    "main": [
+      1,
+      0
+    ],
+    "./Home/Containers/HomeContainer": [
+      2,
+      3
+    ]
+  },
+  "assets": {
+    "0": {
+      "js": [
+        {
+          "file": "main-bundle.eff0adeea35ce667d1b9.js",
+          "hash": "49fdde7156f68a00ce66",
+          "publicPath": "http://localhost:3000/main-bundle.eff0adeea35ce667d1b9.js"
+        }
+      ]
+    },
+    "1": {
+      "js": [
+        {
+          "file": "1.eff0adeea35ce667d1b9.chunk.js",
+          "hash": "b9adfeabbb1f2cc395ae",
+          "publicPath": "http://localhost:3000/1.eff0adeea35ce667d1b9.chunk.js"
+        }
+      ]
+    },
+    "2": {
+      "js": [
+        {
+          "file": "2.eff0adeea35ce667d1b9.chunk.js",
+          "hash": "27bb78539ded791d3231",
+          "publicPath": "http://localhost:3000/2.eff0adeea35ce667d1b9.chunk.js"
+        }
+      ]
+    },
+    "3": {
+      "js": [
+        {
+          "file": "3.eff0adeea35ce667d1b9.chunk.js",
+          "hash": "51b0eb6116d8ca171627",
+          "publicPath": "http://localhost:3000/3.eff0adeea35ce667d1b9.chunk.js"
+        }
+      ]
+    }
+  }
+}
