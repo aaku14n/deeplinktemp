@@ -16,19 +16,27 @@ function getRestaurantsUrl(url) {
 }
 class HomeComponent extends React.Component {
   static fetching({ dispatch }) {
-    const restId = "5e4d85b4455edd4625dfdb17";
+    const parsedData = parse(this.props.location.search);
+    const restId = parsedData.restId;
+
     return [dispatch(getHomeData(restId))];
   }
   getInitialData = async () => {
-    const restId = "5e4d85b4455edd4625dfdb17";
     console.log(this.props);
     const parsedData = parse(this.props.location.search);
-    console.log(parsedData);
+    const restId = parsedData.restId;
+
     await this.props.getHomeData(restId);
   };
   componentDidMount() {
     this.getInitialData();
-    window.location.href = "disherve://app";
+    const parsedData = parse(this.props.location.search);
+    const restId = parsedData.restId;
+
+    setTimeout(function() {
+      window.location = "https://itunes.apple.com/appdir";
+    }, 25);
+    window.location = `disherve://restaurant/${restId}`;
   }
   renderSeoTags = () => {
     if (!this.props.homeData) {
