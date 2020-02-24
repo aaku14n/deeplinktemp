@@ -11,9 +11,6 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const ReactLoadableSSRAddon = require("react-loadable-ssr-addon");
 console.log(process.env.BASE_PATH);
 
-const jsAndCssBasePath = process.env.JS_CSS_CDN_PATH
-  ? process.env.JS_CSS_CDN_PATH
-  : "";
 module.exports = require("./webpack.base")({
   // In production, we skip all hot-reloading stuff
   entry: path.join(process.cwd(), "src/index.js"),
@@ -23,7 +20,7 @@ module.exports = require("./webpack.base")({
     filename: "[name]-bundle.[hash].js",
     chunkFilename: "[name].[hash].chunk.js",
     path: path.join(process.cwd(), "dist"),
-    publicPath: jsAndCssBasePath + process.env.BASE_PATH // this is for deploy to sub directory . we need to change it to /
+    publicPath: process.env.BASE_PATH // this is for deploy to sub directory . we need to change it to /
   },
   optimization: {
     splitChunks: {

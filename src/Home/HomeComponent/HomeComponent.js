@@ -28,7 +28,7 @@ class HomeComponent extends React.Component {
   };
   componentDidMount() {
     this.getInitialData();
-    window.location.href = "dishserve://app";
+    window.location.href = "disherve://app";
   }
   renderSeoTags = () => {
     if (!this.props.homeData) {
