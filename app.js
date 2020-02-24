@@ -230,11 +230,11 @@ server.get("*", async (req, res) => {
             ? styles
                 .map(style => {
                   if (isChrome) {
-                    return `<link rel="preload" type="text/css" href="${jsAndCssBasePath}${BASE_PATH}${
+                    return `<link rel="preload" type="text/css" href="${
                       style.file
                     }"   as="style" onload="if(rel!='stylesheet')rel='stylesheet'"></link>`;
                   }
-                  return `<link  rel="stylesheet" type="text/css" href="${jsAndCssBasePath}${BASE_PATH}${
+                  return `<link  rel="stylesheet" type="text/css" href="${
                     style.file
                   }" ></link>`;
                 })
@@ -253,9 +253,7 @@ server.get("*", async (req, res) => {
           "</body>" +
             scripts
               .map(script => {
-                return `<script src="${jsAndCssBasePath}${BASE_PATH}${
-                  script.file
-                }"   defer></script>`;
+                return `<script src="${script.file}"   defer></script>`;
               })
               .join("\n") +
             `<script>window.INITIAL_STATE = ${
