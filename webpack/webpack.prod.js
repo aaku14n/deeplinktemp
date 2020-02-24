@@ -110,7 +110,7 @@ module.exports = require("./webpack.base")({
       // https://github.com/facebookincubator/create-react-app/issues/2237#issuecomment-302693219
       navigateFallbackWhitelist: [/^\/statics$/],
       staticFileGlobs: ["dist/*.{js,css}"],
-      replacePrefix: jsAndCssBasePath,
+
       stripPrefix: "dist",
 
       // Don't precache sourcemaps (they're large) and build asset manifest:
