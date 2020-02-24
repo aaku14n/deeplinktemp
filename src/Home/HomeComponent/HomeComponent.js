@@ -51,10 +51,18 @@ class HomeComponent extends React.Component {
     const parsedData = parse(this.props.location.search);
     const restId = parsedData.restId;
     let getPlatForm = this.getMobileOperatingSystem();
-    console.log(getPlatForm);
-    // setTimeout(function() {
-    //   window.location = "https://itunes.apple.com/appdir";
-    // }, 25);
+
+    if (getPlatForm === "iOS") {
+      setTimeout(function() {
+        window.location = "https://itunes.apple.com/appdir";
+      }, 25);
+    } else {
+      setTimeout(function() {
+        window.location =
+          "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.theluxurycloset.tclapplication&hl=en";
+      }, 25);
+      // alert("Sorry , we don't have app for android device");
+    }
     window.location = `disherve://restaurant/${restId}`;
   }
   renderSeoTags = () => {
