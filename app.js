@@ -34,13 +34,13 @@ const http = require("http");
 const jsAndCssBasePath = process.env.JS_CSS_CDN_PATH
   ? process.env.JS_CSS_CDN_PATH
   : "";
-var options = {};
-if (process.env.STAGE == "production") {
-  options = {
-    key: fs.readFileSync("/etc/ssl/private/selfsigned.key"),
-    cert: fs.readFileSync("/etc/ssl/certs/selfsigned.crt")
-  };
-}
+// var options = {};
+// if (process.env.STAGE == "production") {
+//   options = {
+//     key: fs.readFileSync("/etc/ssl/private/selfsigned.key"),
+//     cert: fs.readFileSync("/etc/ssl/certs/selfsigned.crt")
+//   };
+// }
 
 server.use(function(req, resp, next) {
   if (req.headers["x-forwarded-proto"] == "http") {
@@ -282,11 +282,11 @@ Loadable.preloadAll()
     http.createServer(server).listen(PORT, () => {
       console.log(`Running on http://localhost:${PORT}/`);
     });
-    if (process.env.STAGE == "production") {
-      https.createServer(options, server).listen(PORT_SSL, () => {
-        console.log(`Running on https://localhost:${PORT_SSL}/`);
-      });
-    }
+    // if (process.env.STAGE == "production") {
+    //   https.createServer(options, server).listen(PORT_SSL, () => {
+    //     console.log(`Running on https://localhost:${PORT_SSL}/`);
+    //   });
+    // }
   })
   .catch(err => {
     console.log(err);
