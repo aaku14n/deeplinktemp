@@ -16,13 +16,12 @@ function getRestaurantsUrl(url) {
 }
 class HomeComponent extends React.Component {
   static fetching({ dispatch }) {
-    const parsedData = parse(this.props.location.search);
+    const parsedData = parse(window.location.search);
     const restId = parsedData.restId;
 
     return [dispatch(getHomeData(restId))];
   }
   getInitialData = async () => {
-    console.log(this.props);
     const parsedData = parse(this.props.location.search);
     const restId = parsedData.restId;
 
@@ -42,7 +41,7 @@ class HomeComponent extends React.Component {
     if (!this.props.homeData) {
       return null;
     }
-    console.log(this.state);
+
     let image = "https://disherveimages.s3-eu-west-1.amazonaws.com/logo.png";
     if (this.props.homeData.restaurantImage) {
       image = getRestaurantsUrl(this.props.homeData.restaurantImage);

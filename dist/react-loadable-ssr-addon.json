@@ -24,36 +24,36 @@
     "0": {
       "js": [
         {
-          "file": "main-bundle.eff0adeea35ce667d1b9.js",
-          "hash": "49fdde7156f68a00ce66",
-          "publicPath": "http://localhost:3000/main-bundle.eff0adeea35ce667d1b9.js"
+          "file": "main-bundle.6c89550eb63e990802f7.js",
+          "hash": "c5fb1774965bfbfc16df",
+          "publicPath": "/main-bundle.6c89550eb63e990802f7.js"
         }
       ]
     },
     "1": {
       "js": [
         {
-          "file": "1.eff0adeea35ce667d1b9.chunk.js",
+          "file": "1.6c89550eb63e990802f7.chunk.js",
           "hash": "b9adfeabbb1f2cc395ae",
-          "publicPath": "http://localhost:3000/1.eff0adeea35ce667d1b9.chunk.js"
+          "publicPath": "/1.6c89550eb63e990802f7.chunk.js"
         }
       ]
     },
     "2": {
       "js": [
         {
-          "file": "2.eff0adeea35ce667d1b9.chunk.js",
+          "file": "2.6c89550eb63e990802f7.chunk.js",
           "hash": "27bb78539ded791d3231",
-          "publicPath": "http://localhost:3000/2.eff0adeea35ce667d1b9.chunk.js"
+          "publicPath": "/2.6c89550eb63e990802f7.chunk.js"
         }
       ]
     },
     "3": {
       "js": [
         {
-          "file": "3.eff0adeea35ce667d1b9.chunk.js",
-          "hash": "51b0eb6116d8ca171627",
-          "publicPath": "http://localhost:3000/3.eff0adeea35ce667d1b9.chunk.js"
+          "file": "3.6c89550eb63e990802f7.chunk.js",
+          "hash": "023dbf34128b43941bf8",
+          "publicPath": "/3.6c89550eb63e990802f7.chunk.js"
         }
       ]
     }

@@ -178,7 +178,7 @@ server.get("*", async (req, res) => {
         return isBot && component.fetching
           ? component.fetching({
               ...storeObj,
-              path: req.path.replace(localBaseUrlForInternalRouting, "/")
+              path: req.path
             })
           : null;
       })
