@@ -27,14 +27,34 @@ class HomeComponent extends React.Component {
 
     await this.props.getHomeData(restId);
   };
+  getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+      return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+      return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS";
+    }
+
+    return "unknown";
+  }
   componentDidMount() {
     this.getInitialData();
     const parsedData = parse(this.props.location.search);
     const restId = parsedData.restId;
-
-    setTimeout(function() {
-      window.location = "https://itunes.apple.com/appdir";
-    }, 25);
+    let getPlatForm = this.getMobileOperatingSystem();
+    console.log(getPlatForm);
+    // setTimeout(function() {
+    //   window.location = "https://itunes.apple.com/appdir";
+    // }, 25);
     window.location = `disherve://restaurant/${restId}`;
   }
   renderSeoTags = () => {
@@ -62,15 +82,10 @@ class HomeComponent extends React.Component {
       <div className="App">
         {this.renderSeoTags()}
         <header className="App-header">
-          <p>{this.props.homeData && this.props.homeData.name}</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <img
+            src="https://disherveimages-resized.s3-eu-west-1.amazonaws.com/splash.png"
+            style={{ width: "100%", height: "100%" }}
+          />
         </header>
       </div>
     );
