@@ -63,7 +63,7 @@ class HomeComponent extends React.Component {
       // }, 25);
       setTimeout(function() {
         alert("Sorry , we don't have app for android device");
-      }, 25);
+      }, 1000);
     }
     window.location = `disherve://restaurant/${restId}`;
   }
