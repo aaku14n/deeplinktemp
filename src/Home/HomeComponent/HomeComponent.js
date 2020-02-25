@@ -61,7 +61,9 @@ class HomeComponent extends React.Component {
       //   window.location =
       //     "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.theluxurycloset.tclapplication&hl=en";
       // }, 25);
-      alert("Sorry , we don't have app for android device");
+      setTimeout(function() {
+        alert("Sorry , we don't have app for android device");
+      }, 25);
     }
     window.location = `disherve://restaurant/${restId}`;
   }
