@@ -122,7 +122,7 @@ server.get("*", async (req, res) => {
   const countryCode = req.headers["cf-ipcountry"];
   let storeObj;
   const userAgent = req.headers["user-agent"];
-  console.log(userAgent);
+
   const isBot = true;
 
   var isChrome = /Chrome/.test(userAgent);
