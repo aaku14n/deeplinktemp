@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Loadable from "react-loadable";
 import { withRouter } from "react-router-dom";
+import TermAndConditionPage from "./Home/HomeComponent/TermAndConditionPage";
 
 const HomeContainer = Loadable({
   loader: () => import("./Home/Containers/HomeContainer"),
@@ -16,6 +17,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Switch>
+          <Route path={routePath.APP_TNC} component={TermAndConditionPage} />
           <Route path={routePath.HOME_ROUTE} component={HomeContainer} />
         </Switch>
       </React.Fragment>

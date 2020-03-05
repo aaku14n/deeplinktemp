@@ -113,3 +113,5 @@ export const LANDING_BANNER_REGEX = /pages\/[A-Za-z0-9]+/;
 export const REDIRECT_CATEGORY_URLS = /^\/ar\/category\/$|\/category\//;
 export const REDIRECT_BRAND_URLS = /^\/ar\/brands\/$|\/brands\//;
 export const SELL = "sell";
+
+export const APP_TNC = "/tnc";
