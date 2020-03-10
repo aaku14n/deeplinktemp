@@ -115,3 +115,4 @@ export const REDIRECT_BRAND_URLS = /^\/ar\/brands\/$|\/brands\//;
 export const SELL = "sell";
 
 export const APP_TNC = "/tnc";
+export const CONTACT_US = "/contact-us";
