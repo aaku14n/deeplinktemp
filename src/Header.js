@@ -11,7 +11,7 @@ export default function Header(props) {
         background: "#fff"
       }}
     >
-      <img src={"/assets/logo.png"} style={{ width: "70px" }} />
+      <img src={"/assets/logo.png"} style={{ width: "70px", height: "70px" }} />
       <h2 style={{ marginLeft: "10px" }}>DishErve</h2>
     </div>
   );
